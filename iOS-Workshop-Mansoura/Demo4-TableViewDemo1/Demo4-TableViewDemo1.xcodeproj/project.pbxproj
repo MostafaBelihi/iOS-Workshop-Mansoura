@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1EA7078E211B6659002DEB07 /* TableViewDemo1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewDemo1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EA7078E211B6659002DEB07 /* Demo4-TableViewDemo1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo4-TableViewDemo1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EA70791211B6659002DEB07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EA70796211B6659002DEB07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1EA70798211B665A002DEB07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		1EA7078F211B6659002DEB07 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1EA7078E211B6659002DEB07 /* TableViewDemo1.app */,
+				1EA7078E211B6659002DEB07 /* Demo4-TableViewDemo1.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,9 +97,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1EA7078D211B6659002DEB07 /* TableViewDemo1 */ = {
+		1EA7078D211B6659002DEB07 /* Demo4-TableViewDemo1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1EA707A0211B665A002DEB07 /* Build configuration list for PBXNativeTarget "TableViewDemo1" */;
+			buildConfigurationList = 1EA707A0211B665A002DEB07 /* Build configuration list for PBXNativeTarget "Demo4-TableViewDemo1" */;
 			buildPhases = (
 				1EA7078A211B6659002DEB07 /* Sources */,
 				1EA7078B211B6659002DEB07 /* Frameworks */,
@@ -109,9 +109,9 @@
 			);
 			dependencies = (
 			);
-			name = TableViewDemo1;
+			name = "Demo4-TableViewDemo1";
 			productName = TableViewDemo1;
-			productReference = 1EA7078E211B6659002DEB07 /* TableViewDemo1.app */;
+			productReference = 1EA7078E211B6659002DEB07 /* Demo4-TableViewDemo1.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -129,7 +129,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1EA70789211B6659002DEB07 /* Build configuration list for PBXProject "TableViewDemo1" */;
+			buildConfigurationList = 1EA70789211B6659002DEB07 /* Build configuration list for PBXProject "Demo4-TableViewDemo1" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -142,7 +142,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1EA7078D211B6659002DEB07 /* TableViewDemo1 */,
+				1EA7078D211B6659002DEB07 /* Demo4-TableViewDemo1 */,
 			);
 		};
 /* End PBXProject section */
@@ -347,7 +347,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1EA70789211B6659002DEB07 /* Build configuration list for PBXProject "TableViewDemo1" */ = {
+		1EA70789211B6659002DEB07 /* Build configuration list for PBXProject "Demo4-TableViewDemo1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1EA7079E211B665A002DEB07 /* Debug */,
@@ -356,7 +356,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1EA707A0211B665A002DEB07 /* Build configuration list for PBXNativeTarget "TableViewDemo1" */ = {
+		1EA707A0211B665A002DEB07 /* Build configuration list for PBXNativeTarget "Demo4-TableViewDemo1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1EA707A1211B665A002DEB07 /* Debug */,
