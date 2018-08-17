@@ -8,6 +8,7 @@
 
 import UIKit
 
+//SS: Implement protocols of control's behavior (in class definition of view controller).
 class UserListViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
     @IBOutlet weak var usersTableView: UITableView!
@@ -16,8 +17,11 @@ class UserListViewController: UIViewController,UITableViewDataSource,UITableView
                                        User(userImage: UIImage(named: "account_green")!, userName: "Name 1", userAddress: "Address 1"),
                                        User(userImage: UIImage(named: "account_green")!, userName: "Name 2", userAddress: "Address 2"),
                                        User(userImage: UIImage(named: "account_green")!, userName: "Name 3", userAddress: "Address 3")]
-    override func viewDidLoad() {
+	
+	override func viewDidLoad() {
         super.viewDidLoad()
+		
+		//SS: Assign current class (view controller in this case) as the place where protocol implementations reside.
         usersTableView.dataSource = self
         usersTableView.delegate = self
     }

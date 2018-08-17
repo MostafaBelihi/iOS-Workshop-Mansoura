@@ -6,6 +6,8 @@
 //  Copyright © 2018 MahmoudOrganization. All rights reserved.
 //
 
+/*** This file had comments in Demo1 ***/
+
 import UIKit
 
 class LoginViewController: UIViewController {
