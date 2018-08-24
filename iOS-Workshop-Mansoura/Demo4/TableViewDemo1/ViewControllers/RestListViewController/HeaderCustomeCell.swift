@@ -12,7 +12,8 @@ class HeaderCustomeCell: UITableViewCell {
 
     @IBOutlet weak var catNameLbl: UILabel!
     @IBOutlet weak var showMoreBtn: UIButton!
-    override func awakeFromNib() {
+	
+	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

@@ -10,6 +10,7 @@ import UIKit
 
 class RestCustomeCell: UITableViewCell {
 
+	//SS: Elements in the cell
     @IBOutlet weak var restImageView: UIImageView!
     
     @IBOutlet weak var restNameLbl: UILabel!
