@@ -6,33 +6,43 @@
 //  Copyright © 2018 Codex. All rights reserved.
 //
 
+///SSS:: File Commented
+
 import Foundation
 import Alamofire
 
-
-
+//SS: Encapsulation for network related functions
 struct NetworkManager {
 	
+	//SS: Static singleton for the class
 	static var sharedInstance = NetworkManager()
 	
-	func send(strUrl:String,params:Parameters?,
-			  method:HTTPMethod = .get ,
-			  completionBlock:@escaping (_ jsonResponse:[String:Any]? , _ error:String?)->Void) {
+	//SS: Sends request and handles its response
+	func send(strUrl:String,		//SS: Request URL
+		params:Parameters?,			//SS: Parameters
+		method:HTTPMethod = .get ,	//SS: Method
+		completionBlock:@escaping (_ jsonResponse:[String:Any]? , _ error:String?)->Void) {
+		//SS: Closure to which response will be handed
+		// jsonResponse is a Dictionary to handle JSON object
 		
+		//SS: Making request
 		Alamofire.request(strUrl,
 						  method: method,
 						  parameters: params,
 						  encoding: JSONEncoding.default,
-						  headers: nil).responseJSON { response in
-							
+						  headers: nil).responseJSON { response in	//SS: Lambda expression like (x => x) in C#
 							if let data = response.data {
-								
+								//SS: Success
 								do {
+									//SS: Serialize JSON object
 									let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
 									
+									//SS: Hand response to passed closure
 									completionBlock(json, nil)
-									
-								} catch let error as NSError {
+								}
+								//SS: Error
+								catch let error as NSError {
+									//SS: Hand response to passed closure
 									completionBlock(nil , error.localizedDescription)
 								}
 							}

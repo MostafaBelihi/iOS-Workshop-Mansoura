@@ -6,6 +6,8 @@
 //  Copyright © 2018 Codex. All rights reserved.
 //
 
+///SSS:: File Commented
+
 import UIKit
 import Alamofire
 
@@ -14,15 +16,18 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 	
+	//SS: Array of model
 	var dataSource = [Item]()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		//SS: TableView Adopters
 		tableView.dataSource = self
 		tableView.delegate = self
-		tableView.estimatedRowHeight = 400
-		tableView.rowHeight = UITableViewAutomaticDimension
+		
+		tableView.estimatedRowHeight = 400	//SS: Review its Quick Help
+		tableView.rowHeight = UITableViewAutomaticDimension	//SS: Review its Quick Help
 		
 		populateDataSource()
 		activityIndicator.hidesWhenStopped = true
@@ -32,12 +37,14 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
 	private func populateDataSource() {
 		activityIndicator.startAnimating()
 		
+		//SS: Calling service using our NetworkManager
 		NetworkManager.sharedInstance.send(strUrl: "http://efhes.com/api/v1/services",
 										   params: nil)
 		{ [unowned self] (response,error) in
+			//SS: Closure that will handle response
 			
+			//SS: Handle error
 			if let strError = error {
-				
 				let alert = UIAlertController(title: "Info !",
 											  message: strError,
 											  preferredStyle: .alert)
@@ -51,9 +58,21 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
 				return
 			}
 			
+			//SS: Handle success response
+			//SS: Array of Dictionaries (JSON objects)
 			let dataArray = response!["data"] as! NSArray
+			
+			//SS: Assign response array to TableView data source
+			/*SS:
+				The map function maps every element in the mapped array to new implementation
+				in its argument. Here it uses constructor of Item model to map data in
+				every Dictionary to properties of the model (model constructor does that).
+			*/
 			self.dataSource = dataArray.map({ Item(dict: $0 as! [String : Any]) })
+			
+			//SS: Important to load new data in TableView
 			self.tableView.reloadData()
+			
 			self.activityIndicator.stopAnimating()
 		}
 		
@@ -83,6 +102,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
 		//        }
 	}
 	
+	//SS: TableView implementations
 	func numberOfSections(in tableView: UITableView) -> Int {
 		return 1
 	}

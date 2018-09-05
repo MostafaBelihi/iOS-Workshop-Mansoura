@@ -6,6 +6,8 @@
 //  Copyright © 2018 Codex. All rights reserved.
 //
 
+///SSS:: File Commented
+
 import Foundation
 
 struct Item {
@@ -15,6 +17,7 @@ struct Item {
 	var details:String!
 	var imageUrl:String!
 	
+	//SS: Constructor binds incoming Dictionary to model instance
 	init(dict:[String:Any]) {
 		self.id = dict["id"] as? String ?? ""
 		self.name = dict["name"] as? String ?? ""

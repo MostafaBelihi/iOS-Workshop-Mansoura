@@ -6,6 +6,8 @@
 //  Copyright © 2018 Codex. All rights reserved.
 //
 
+///SSS:: File Commented
+
 import UIKit
 import Kingfisher
 
@@ -23,9 +25,11 @@ class ItemCustomeCell: UITableViewCell {
 	
 	
 	func configurerWithItem(item:Item) {
+		//SS: Binds item to view elements
 		itemTitleLbl.text = item.name
 		itemDetailsLbl.text = item.details
 		
+		//SS: Binds image by URL using KingFisher
 		let url = URL(string: item.imageUrl)
 		itemImageView.kf.setImage(with: url)
 	}

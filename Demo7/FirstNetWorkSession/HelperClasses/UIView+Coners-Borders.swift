@@ -28,6 +28,9 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+///SSS:: File Commented
+//SS: Extension to UIView properties in Xcode Inspector
+
 import UIKit
 
 extension UIView {
