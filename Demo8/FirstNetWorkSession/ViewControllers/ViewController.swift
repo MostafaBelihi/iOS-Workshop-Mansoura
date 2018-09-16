@@ -34,6 +34,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
 		activityIndicator.startAnimating()
 		let path = "http://efhes.com/api/v1/services"
 		NetworkManager.sharedInstance.sendCodable(HomeResponse.self,
+												  	//SS: Passing the type to be decoded to
 												  path: path,
 												  httpMethod: .get,
 												  params: nil)
