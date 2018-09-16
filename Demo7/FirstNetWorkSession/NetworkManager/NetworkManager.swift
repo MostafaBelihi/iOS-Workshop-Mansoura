@@ -36,6 +36,7 @@ struct NetworkManager {
 								do {
 									//SS: Serialize JSON object
 									let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+												//SS: [String: Any] is a dictionary
 									
 									//SS: Hand response to passed closure
 									completionBlock(json, nil)
