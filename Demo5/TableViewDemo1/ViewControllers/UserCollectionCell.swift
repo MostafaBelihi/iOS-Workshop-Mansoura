@@ -8,6 +8,7 @@
 
 import UIKit
 
+//SS: Custom cell in ConnectionView
 class UserCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var userImageView: UIImageView!
