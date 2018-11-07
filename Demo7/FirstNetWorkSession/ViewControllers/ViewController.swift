@@ -64,7 +64,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
 			
 			//SS: Assign response array to TableView data source
 			/*SS:
-				The map function maps every element in the mapped array to new implementation
+				The map function maps every element in the mapped array to new instance
 				in its argument. Here it uses constructor of Item model to map data in
 				every Dictionary to properties of the model (model constructor does that).
 			*/
